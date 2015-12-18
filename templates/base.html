@@ -1,0 +1,150 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="/favicon.png">
+
+    <title>{% block head_title %}{{ page.title }}{% endblock %} Issac Kelly; software engineer, hardware hacker</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="/bootstrap-3.0.0/dist/css/bootstrap.css" rel="stylesheet">
+    <link rel="alternate" type="application/xml" title="Issac Kelly" href="http://www.issackelly.com/blog/.xml" />
+
+    {% block styles %}
+    <style type="text/css">
+    a {
+        color: rgb(110, 57, 130);
+        text-decoration: underline;
+    }
+    a:active, a:hover {
+        color: rgb(220, 200, 250);
+    }
+    a.no-underline {
+        text-decoration: none;
+    }
+    pre {
+        background: #fcfcfc;
+    }
+    .footer {
+        background: #ccc;
+        color: #333;
+    }
+    .navbar {
+        border-radius: 0;
+    }
+    .btn {
+        border-radius: 0;
+    }
+    pre {
+        border-radius: 0;
+        color: rgb(110, 57, 130);
+        background: rgb(220, 200, 250);
+    }
+    code {
+        color: rgb(110, 57, 130);
+        background: rgb(220, 200, 250);
+    }
+
+
+
+    .navbar a.navbar-brand, .navbar-nav li a.no-underline {
+        color: #333;
+    }
+    </style>
+    {% endblock styles %}
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/bootstrap-3.0.0/assets/js/html5shiv.js"></script>
+      <script src="/bootstrap-3.0.0/assets/js/respond.min.js"></script>
+      <script src="/bootstrap-3.0.0/assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+      <!-- Static navbar -->
+      <div class="navbar navbar-default">
+       <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand no-underline" href="/">Issac Kelly</a>
+        </div>
+        <div class="navbar">
+          <ul class="nav navbar-nav">
+            <li><a href="/blog/" class=" no-underline">Blog</a></li>
+            <li><a href="https://github.com/issackelly/" class=" no-underline">Github</a></li>
+            <li><a href="https://twitter.com/issackelly/" class=" no-underline">Twitter</a></li>
+            <li><a href="mailto:issac.kelly@gmail.com" class=" no-underline">Email</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+       </div>
+
+  {%  block main %}
+    <div class="container">
+      <!-- Main component for a primary marketing message or call to action -->
+
+    {% if messages %}
+    <div class="row">
+      <div class="col-md-12 messages">
+        {% for message in messages %}
+          <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endif %}
+
+      <div class="row">
+        <div class="col-md-8">
+            {% block body %}{% block content %}
+            <h2>{% page "title" %}</h2>
+              {% page "content" type="wysiwyg" %}
+            {% endblock %}{% endblock %}
+        </div>
+        <div class="col-md-4">
+            <p><img src="http://www.gravatar.com/avatar/e00722884b2ce414a6d563fddd8197fb" style="float: left; margin: 0 8px 8px 0" /> I'm Issac Kelly. I like to build things, with software and hardware.
+                I am looking for new gigs. <a href="mailto:issac@issackelly.com" >Email Me</a>.
+            <hr/>
+            <h4>If you want to know when I write</h4>
+            <p>If you want to know when I write, you should give me your email address, or if rss is your thing, <a href="http://issackelly.com/blog/feeds/">subscribe</a></p>
+            <form action="/siteapi/submit_form" method="POST" >
+                {% csrf_token %}
+                <div class="input-group">
+                  <input type="hidden" name="emailsubmit" value="yup" />
+                  <input type="email" name="email" class="form-control">
+                  <span class="input-group-btn">
+                    <input class="btn btn-default" type="submit" value="Yes!">
+                  </span>
+                </div><!-- /input-group -->
+            </form>
+        </div>
+      </div>
+    </div> <!-- /container -->
+    {%  endblock main %}
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                <img src="https://en.gravatar.com/userimage/4918007/344eb5486360f25392810d4ba635675b.png?size=70" style="float: left; margin: 0 8px 8px 0">
+                <h5>&copy; 2007-{% now "Y" %} Issac Kelly</h5>
+                <p>I'm an engineer, artist, and designer with a hardware and software background. I live in Oakland, California. I focus on the Interactive and Immersive Art, and the Web.</p>
+                <p>I am looking for new gigs.</p>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    try {
+    var pageTracker = _gat._getTracker("{{ GA_KEY }}");
+    pageTracker._trackPageview();
+    } catch(err) {}
+    </script>
+  </body>
+</html>

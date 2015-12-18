@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block head_title %}{{ page.title }} &mdash; {{ block.super }}{% endblock %}
+
+
+{% block content %}
+    <div class="blogPost">
+    <h2>{% page "title" %}</h2> 
+    {% page "content" type="wysiwyg" %}
+
+    <p class="post_dateline">
+        <span class="date">{% if page.published %}{{ page.published|date:"jS F Y" }}{% else %}Not published yet{% endif %}</span>
+    </p>
+
+    </div>
+{% endblock %}

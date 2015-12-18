@@ -1,0 +1,69 @@
+==================================================================
+https://keybase.io/issackelly
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://www.issackelly.com
+  * I am issackelly (https://keybase.io/issackelly) on keybase.
+  * I have a public key with fingerprint 5AF6 934A B3D0 6FF0 7CBE  14F1 8CAB B9A9 60CA 9159
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "5af6934ab3d06ff07cbe14f18cabb9a960ca9159",
+            "host": "keybase.io",
+            "key_id": "8CABB9A960CA9159",
+            "uid": "ad5733b540f0e72b0c758b645c6af800",
+            "username": "issackelly"
+        },
+        "service": {
+            "hostname": "www.issackelly.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1396294237,
+    "expire_in": 157680000,
+    "prev": "365f0a9195c33b7a55749e034b1e86c6afc1fdfe7cc6dc00d9fda3d7234ff4de",
+    "seqno": 17,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v1
+
+owGbwMvMwMTYs3rnyoRTEyMZTx/4lcQQbHkotlopKT+lUsmqWik7FUylZealpxYV
+FGXmlShZKZkmpplZGpskJhmnGJilpRmYJyelGpqkGVokJyYlWSZamhkkJ1oamloq
+6Shl5BeDdACNSUosTtXLzAeKATnxmSlAUQtnRycnS0egemdHqPpSsERiiqm5sXGS
+qYlBmkGquVGSQbK5qUWSmYlpsllimoWBAUhhcWpRXmJuKlB1ZnFxYnJ2ak5OpVKt
+jhJQvCwzORXkapDlUDXl5eV6CHV6yfm5QDMKivJL8pPzc4DyGSUlBVYg7SWVBWD1
+qUnxUJPikzLzUoD+B2ooSy0qzszPU7IyBKpMLskEGW1obGlmZGliZGyuo5RaUZBZ
+lBqfCVJham4GdKmBAcia1DKgkcZmpmkGwHCxNE0G+s080dTU3MQy1cDYJMkw1cIM
+5LNkw7SUtFTz5GSzlGQDgxTLtJRE4xRzI2OTtDSTlFQlkN8K8/KBZgOtKklMB5pZ
+nJmel1hSWpSqVNvJJMPCwMjEwMbKBIpCBi5OAVjElu0UYFhdPGHZJaY7/lNCs3K2
+H3Jnqa/42yeSeC1lno+RXfPu8qnLZps+/ORyyUHwvc6XNXXZL8+dWv1Wb1/EThHD
+9IP71O449og4W4bJ+3uWcr6LFFmVkPf/UAVX4GUGYZfEPNXNj0wcphxP1RR23FEq
+/P/h3buJBby3rER09N7M867zeZbwuFigaNFPzlLGl3fnVYjIBvbYn5gTcO5PD+e9
+uR6ivzlYGPf8N9v3KPXO4Qh9azOBR7kBs/p69338b+P3p3ir1dszmfvFUyzWPRL8
+1rZgC+dZDY70YsXGTcvUlQ06AoqeKb++9HGJwasfew6LPTFdfHn6r86PsrdTdsU/
+1C+wqptw2Wda0Jb0N57XSh8e/GqsWC24YlGxtneEbl5S59crk5yvcpxZ2Xnh2uSK
+BPuVRpeblPqcuu9+PPlXXOdblIOZhPrzii3XRQLtfz38qrZDae4jze1bGF7ELT9k
+OUV+068VCx2PJq40ydL6yu/m2F2XpX1JPYVHuVVr9Z0n6Yy1J2fPWrHQI2fm9fBZ
+XxqfHKwU3a3qzRFy+uSx5w7tXRuq9R8Ys17Zcll+XX8oC0+J7C6R6mVhzL9Kt85d
+ckz+nOd6fx+PFb93HJ8xUas40dUjoj/IVSmnf8/Tkt/+5R7Fb7JbZ7j39v7OYJ34
+VnTF1YKVu+7+F9pisjeN95PxrWjrc8uyc66dUVx/aPnL85e8I/Oq/vkYRj64WQ0A
+=g9lj
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/issackelly
+
+==================================================================

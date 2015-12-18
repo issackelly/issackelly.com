@@ -1,0 +1,197 @@
+{%  extends "base.html" %}
+
+{% block styles %}
+<link href="/css/fireflies.css" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block main %}
+    <div class="firefly-section intro">
+    <div class="container">
+    <div class="row">
+        <div class="col-md-6">
+
+            <h1>Fireflies</h1>
+            <div class="text-lighten">
+            <p>I’m bringing more fireflies into the world and I want you to help. I also built a thing and I want it to be able to help you build your stories. This story is one of mine. There will be technical parts, so if you’re not interested, skip them, the rest is good too.</p>
+            <p>If you were born and lived your whole life on Mars, the tales of the beauties of Earth would be told to you as you grew. You’d see what’s described as a blue marble as just a bright light occasionally moving across the sky. The blue marble having its own billions of stories, each one moving through the sky with it. As many of these things go, separating the fairy from the fleck of light in the sky is an exercise best left to the receiver of the tale. This is the story of fireflies and their uncanny transportation and my attempts at undissection.</p>
+            <p>In the summer of 2015, the american luminous firefly were spotted for the first time in living memory west of the Rocky Mountains. If you believe in coincidence, their appearance coincided with a project I was doing. I’d like to think that my crude approximations were a siren’s song for the real thing. I’d like even more so to think that they somehow understood my desires to share their beauty with my new home and decided to upstage my tiny affair. I don’t speak insect so I’m fairly certain I’ll never know.</p>
+            <p>My part in this started in June. My partner and I shared a wish; we wanted fireflies. She and I both started in the midwest and, knowing summer was quickly approaching, we were getting nostalgic. I’ve blinked a few lights in my day, so I began work on my the Crude Arduino Compatible Approximation, or tCaCa.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-5">
+            <h2>The Plan</h2>
+
+                        <div class="text-lighten">
+
+<p>I decided I’d build a couple dozen tCaCa insects in my garage, so we could hang them in the shrubs like you might hang a christmas ornament. We could sit in our driveway with a cool drink or watch them from our bedroom window.</h2>
+<p>Even in the low twenties, it was going to be better to get some custom hardware, get some PCBs manufactured, price out parts and not “Just Wing It” like I often do when I’m building one of something.</p>
+<p>I think that most electronics designers turn to full-flashes and bright lights. This combined with the typical LED colors being in the brightest candy colors imaginable, makes a certain undesirable aesthetic that has a taken over most of the light art I see, and way too present in industrial design. We needed something biological, if in the neon and uncanny realm of biological.</p>
+<p>I also wanted to mimic the patterns seen in nature. That cut out most analog pulsing circuits which would be too regular. We’ll reach instead for a more subdued design, A microcontroller with a PWM pin and a warm white LED. If I’m getting really lofty (and trust me, I am) I’m hoping to make an approachable platform for battery powered light art. That almost certainly means arduino compatible. So now we’ve got our main components. An LED, a microcontroller, a battery. The battery needs a battery holder. I chose the Attiny85 because it’s cheap, arduino compatible, easy to solder the DIP package. It’s also got good features for low power consumption and requires 0 external parts to function for our use case.</p>
+</div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <div class="first">
+    <video autoplay loop poster="/img/firefly/first.jpg" id="firstbgvid">
+        <!--<source src="/video/fireflybg.webm" type="video/webm">-->
+        <source src="/video/fireflybg.mp4" type="video/mp4">
+    </video>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-4">
+                <h2>First Prototype</h2>
+                 <div class="text-lighten-2">
+                <p>I had a digistump lying around. It’s an Arduino compatible AtTiny85 with USB on board. It’s a handy dev platform*. I wrote a quick Arduino sketch (their term for program) for blinking a light. I programmed the Arduino and removed it from my computer. I wired the whole thing up, bypassing all the stuff for USB and wire the power for the Attiny directly to my bench power supply, set it at 3v and an led directly to the output pin. Basically I tied all the parts together and wrote the smallest program I could to try the idea and It worked! All my measurements were in the right ranges to have a self-contained system of only three parts, which makes it cheap and easy to assemble.
+dev, or development platform typically means a bit of hardware that connects to your computer to easily program and debug your prototypes. It’s so you don’t have to make custom hardware for every time you want to try something out. I’d consider most Arduinos dev platforms. Dev platforms can be good as a final build when you’re only making one or two of something.
+                <h4>Parts List</h4>
+                   <ul>
+                       <li>Digistump</li>
+                       <li>LED</li>
+                       <li>Bench power supply (or 3v of batteries, like a coin cell or 2x AA)</li>
+                   </ul>
+                     </div>
+                </div>
+            </div><div class="row">
+            <div class="col-md-6 col-md-offset-2">
+                <h2>Second Prototype</h2>
+                 <div class="text-lighten-2">
+<p>For my second prototype (parts list below), I went to Al Lasher’s, as close as I have to a local hobbyist electronics store in Berkeley, and picked up parts. I got a watch battery and something to keep it in, and some DIP* package ATTinys. I put them together on a solderless breadboard. There is a great trick where one Arduino can be used to program a second Arduino. It’s really useful for this exact circumstance where you can’t connect the second one directly to the computer, or you’re starting with a bare chip that doesn’t have the Arduino bootloader already. More on that here. I wired it all together just like the tutorial, so then I had an easily repeatable way to tinker with the code portion of the build, and to try out different lights and hardware.
+DIP stands for “Dual Inline”. It’s a through hole part that has two rows of pins at a specific distance apart from each other. It’s an industry standard and it is easy for a beginner to solder, and it fits into solderless breadboards, one of the most beginner-friendly ways to start playing with electronics.
+<h4>Parts List</h4>
+                     <ul>
+                         <li>Solderless Breadboard
+                         <li>LED
+                         <li>AtTiny 85
+                         <li>A bunch of MM jumper cables
+                         <li>CR2032 battery
+                         <li>CR2032 battery holder
+                         <li>A couple standoff pins to solder to the battery holder
+                     </ul>
+                     </p>
+
+
+                                 </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-md-offset-6">
+            <h2>Third Prototype</h2>
+<h3>First Custom Printed Circuit Board (PCB) Layout</h3>
+<div class="text-lighten-2"><p>I knew my final components list, so I started on a PCB layout. I used EAGLE which is free if your designs are small and not terribly complex. Most hobbyists will not ever fall out of those requirements if they’re careful. I had to find and install a library for the ATTiny. Since there wasn’t a 10mm LED part, or a part for the battery strap I chose, I needed to make those too. I whipped up a quick 2 layer design and sent it off to OshPark. I decided on the SODIMM package, it’s cheaper in two ways, it makes my final PCB smaller (and you pay by the square inch) and the part itself is cheaper, even in small quantities.
+I sent the design off to OSHPark, which takes 2-3 weeks.</div>
+            <h3>Second PCB layout</h3>
+<div class="text-lighten-2"><p>I didn’t want to wait 2-3 weeks… so this is the one where I was just playing with new toys. I got a shapeoko and I had/have delusions of milling circuit boards on it. I know other people have. I reworked my first PCB layout to be on a single layer, so that it would be easier to machine.
+I milled the modified design and built the first manufactured prototype with “final” parts.
+It turns out my first version was too quick of a design, because the pads for the battery strap were the wrong distance from each other. That was a $15 mistake, which is pretty cheap in the hardware world, but it did make me feel bad. I knew that the boards I had ordered from OSHPark were going to come back and have the same (wrong) size battery holder. I should have printed a full size version of the PCB on my inkjet printer and compared the parts and batteries to that to check. There’s an old axiom, “measure twice, cut once”. Sometimes that means finding multiple ways of measuring the same thing.</p></div>
+</div></div><div class="row"><div class="col-md-6 col-md-offset-1">
+    <h2>First Batch</h2>
+<div class="text-lighten-2"><p>By this time I was under constraints. If I was going to get them out before the end of summer I needed to get them out to the final board house*. This meant no time for things to be wrong. I made a few design revisions, I did the silk screen design I wanted, I cleaned up the edges and fixed the names. I put holes in the board for ornament hooks so they could be hung from bushes. I clicked send and put in my credit card and hoped that I didn’t make a much more costly mistake.
+Seeed Studio’s prices were 50% cheaper than OSHPark at quantity, and I had more control over the final PCB
+I didn’t!
+I ordered the rest of the parts at the same time, they all came in right at the 2-3 week mark, with the boards from Shenzen being the last to arrive.
+I got lucky. The boards were great. I sunk some hours into manufacturing them by hand in the garage. We enjoyed the first light in our shrubbery on Saturday and all couple dozen on Sunday evening. The undissection was complete.
+
+        <h3>Final parts list</h3>
+    <ul>
+         <li>CR2032 Battery
+         <li>CR2032 Battery Strap
+         <li>ATtiny 85, DIP package
+         <li>6 pin DIP socket *Not necessary, but it makes programming much easier.
+         <li>10mm Warm White LED tCaCa PCB
+    </ul>
+    </div>
+        </div>
+    </div>
+    </div>
+</div>
+<div class="firefly-section final">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="lighten">Wishing and Hoping</h2>
+                <div class="text-lighten">
+                    <p>It was nice. We had our own private window to summer in The Middle. There was more longing though. It wasn’t enough for it to just be ours. Summer was waning and we still had the hole, the wish to share.
+                    <p>Our small batch of fireflies came with us to a camping trip in Mendocino. We spread them thin across a wide expanse of shrubbery, fruit trees and redwood. It was early afternoon. We couldn’t see them light but I could tell how lonely they would look in this sparse arrangement.
+                    <p>We made camp and ate dinner and drank wine and forgot about them for a few hours. Well into the night we remembered and headed back to the orchard.
+                    <p>My heart swelled and my eyes welled. There were thousands of them. They lit the orchard and the field and the woods for moments at a time, swirling around. I collapsed, overwhelmed and sat on the cool ground for the rest of the night. It was the sort of pure magic that books get written about and read to children to give them good dreams.
+                    <p>We shared something really special that weekend. We collected what were now obviously inferior approximations before going home.</p>
+                </div>
+            </div>
+        </div><div class="row">
+            <div class="col-md-6 col-md-offset-4">
+                <h2 class="lighten">Pushing my luck</h2>
+                <div class="text-lighten">
+                    <p>They say lightning doesn’t strike the same place twice. I knew that was patently untrue so I gathered some friends and tried to take matters into my own hands. We scattered our crude approximations along the topiside of Temescal Creek and Frog park. We waited. We left for dinner and pizza down the road. We tried to forget. I felt like johnny appleseed, planting seeds and hoping for trees.
+                    <p>I went back for days and days. Each night walking through the park with them, surrounding and leading the way. These were some of the most beautiful moments of my entire life, electronic and biological fireflies, orbiting around like a faraway planet or comet, each one full of their own stories.
+                    <p>I chalked their territory to share with others. As they left and the lights started going out on the Crude Approximations I collected them, the next night, the first rain in several dozen months marked the end of summer and washed the chalk away.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="firefly-section next">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Now What?</h2>
+                <div class="text-lighten">
+                    <p>I’d like to make some more. I’d like to tell you when and where you can see them.
+                        I’d like you to make some. I’d like to teach you how to do that, and how to use the
+                        tCaCa board to make your own projects. If you want any of that that too tell me now!
+                        Also tell me your own firefly story! I’d love to hear them.
+                    </p>
+
+                    <p>
+                        I've put the original design and code files up. You can look through or download them here: <a href="https://github.com/issackelly/fireflies">On Github</a>
+                    </p>
+
+                    <p>
+                        I want to hear from you! I want to hear what you'd like to hear more about. I could go on for
+                        hours about the software, the lighting design, the construction, the build process or just more stories.
+                        Send me a note!
+                    </p>
+
+                    <form action="/save" method="POST" />
+                    {% csrf_token %}
+                      <input type="hidden" name="emailsubmit" value="yup" />
+                    <div class="form-group">
+                      <input type="email" name="email" class="form-control" placeholder="My Email">
+                    </div><!-- /input-group -->
+
+                    <div class="form-group">
+                        <textarea id="comment" name="comment" class="form-control" placeholder="My Story or Comment"></textarea>
+                    </div>
+                    <div class="checkbox">
+                    <label>
+                      <input type="checkbox" name="email_ok" checked> It's ok to email me.
+                    </label>
+                  </div>
+                      <p>I (Issac) promise not to share your email, and to stop emailing you whenever you like. I'm just some guy.</p>
+                    <button type="submit" class="btn btn-success">I am excited about this!</button>
+                </form>
+
+                    <hr/>
+                    <p>
+                        I'd like to keep doing projects like this. Really I'd like to do this full-time.
+                        I'll happily rent out fireflies, or accept donations for public installations.
+                        If you're feeling generous, I promise to use any donations to fund future art projects.
+                    </p>
+                    <p>As of now, many are on loan to <a href="http://www.vespertinecircus.com">HiNGE</a>
+                        and about 300 exist. They cost about $3.50 in parts each to manufacture.</p>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                        <input type="hidden" name="cmd" value="_s-xclick">
+                        <input type="hidden" name="hosted_button_id" value="YYGHBLUXMN634">
+                        <input type="submit"  border="0" name="submit" value="Donate via PayPal" class="btn btn-success btn-sm">
+                        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                        </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

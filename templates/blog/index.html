@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% load inlines %}
+
+{% block content %}
+    {% children as posts order_by="-published" %}
+    {% autopaginate posts 4 %}
+    {% for post in posts %} 
+        <h2><a href="/{{ post.path }}" class="post-link no-underline">{{ post.content.title }}</a></h2>
+        <p class="teaser">{{ post.content.content|safe|truncatewords_html:100 }}</p>
+        <p class="more"><a href="/{{ post.path }}" class="post-link">read more...</a></p>
+        <hr/>
+    {% endfor %}
+    <hr/>
+    <div class="row">
+        <div class="col-md-8">
+        {% paginate %}
+        </div>
+    </div>
+
+
+{% endblock %}
